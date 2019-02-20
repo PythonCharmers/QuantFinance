@@ -1,0 +1,8 @@
+These datasets need to be distributed with the course materials:
+
+Available from here: https://github.com/PythonCharmers/PythonCharmersData
+
+---
+
+* AAPL.h5
+

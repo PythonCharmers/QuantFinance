@@ -1,0 +1,7 @@
+altar
+vega_datasets
+vega
+matplotlib
+numpy
+scipy
+pandas
