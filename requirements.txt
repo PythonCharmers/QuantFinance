@@ -1,7 +1,10 @@
-altar
+altair
 vega_datasets
 vega
 matplotlib
 numpy
 scipy
 pandas
+
+# To convert .md to .ipynb:
+notedown
