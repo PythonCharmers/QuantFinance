@@ -5,6 +5,3 @@ matplotlib
 numpy
 scipy
 pandas
-
-# To convert .md to .ipynb:
-notedown
