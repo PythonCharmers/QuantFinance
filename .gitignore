@@ -27,3 +27,6 @@
 **/__pycache__/
 **/*.egg-info/
 altair*.json
+
+my_secrets.py
+
