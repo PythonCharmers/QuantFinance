@@ -1,0 +1,20 @@
+plt.figure(figsize=(12, 12))
+for idx, N in enumerate(trials):
+    if idx == 0:
+        plt.subplot(4,3, 2)
+    else:
+        plt.subplot(4,3, idx+3)
+    y = data[idx]
+    for (a_prior, b_prior), c in zip(beta_params, ('b', 'r', 'g')):
+        p_theta_given_y = dist.pdf(x, a_prior + y, b_prior + N - y)
+        plt.plot(x, p_theta_given_y, c)
+        plt.fill_between(x, 0, p_theta_given_y, color=c, alpha=0.3)
+
+    plt.axvline(theta_real, ymax=0.3, color='k')
+    plt.plot(0, 0, label="{:d} experiments\n{:d} heads".format(N, y), alpha=0)
+    plt.xlim(0,1)
+    plt.ylim(0,12)
+    plt.xlabel(r'$\theta$') 
+    plt.legend()
+    plt.gca().axes.get_yaxis().set_visible(False)
+plt.tight_layout()

@@ -1,0 +1,11 @@
+f, ax = plt.subplots(len(params), len(params), sharex=True, sharey=True, figsize=(12, 12))
+for i in range(4):
+    for j in range(4):
+        α = params[i]
+        β = params[j]
+        y = prior(x, α, β)
+        ax[i,j].plot(x, y)
+        ax[i,j].plot(0, 0, label="$\\alpha$ = {:3.2f}\n$\\beta$ = {:3.2f}".format(α, β), alpha=0)
+        ax[i,j].legend(fontsize=12)
+ax[3,0].set_xlabel(r'$\theta$', fontsize=14)
+ax[0,0].set_ylabel(r'$p(\theta)$', fontsize=14);
