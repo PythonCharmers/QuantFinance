@@ -5,3 +5,5 @@ matplotlib
 numpy
 scipy
 pandas
+jupyter
+notebook
