@@ -5,3 +5,11 @@ matplotlib
 numpy
 scipy
 pandas
+jupyter
+notebook
+pytest
+statsmodels
+sklearn
+tensorflow
+pytables
+quandl
