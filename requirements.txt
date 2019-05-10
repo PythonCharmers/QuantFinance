@@ -13,3 +13,4 @@ sklearn
 tensorflow
 pytables
 quandl
+maxentropy
