@@ -11,6 +11,6 @@ pytest
 statsmodels
 sklearn
 tensorflow
-pytables
+tables
 quandl
 maxentropy

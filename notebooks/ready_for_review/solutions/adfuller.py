@@ -11,8 +11,10 @@ print('p-value: {:.2f}'.format(usd_result[1]))
 
 # Question 2
 euro_diff = euros.diff()
-usd_diff = usd.diff()
+result = adfuller(euros_diff[~np.isnan(euros_diff)])
 
+usd_diff = usd.diff()
+result = adfuller(usd_diff[~np.isnan(usd_diff)])
 
 # Question 3 
 

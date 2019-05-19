@@ -1,12 +1,3 @@
-import time
-
-def my_function():
-    # Replace with your code
-    time.sleep(0.05)
-
-%timeit my_function()
-
-# Solution below - will be removed for final notebook
 
 def run_experiment(n_datapoints=20, threshold=0.8):
     # Note that all data here is randomly chosen

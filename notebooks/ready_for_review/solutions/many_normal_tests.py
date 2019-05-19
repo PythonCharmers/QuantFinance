@@ -29,12 +29,12 @@ for sample_size in sample_size_values:
             scipy_kstest_passed += 1
             
         # statsmodels kstest
-        statistic, p_value = sm.stats.diagnostic.kstest_normal(heights)
+        statistic, p_value = sm.stats.diagnostic.kstest_normal(data)
         if p_value > 0.05:
             statsmodels_kstest_passed += 1
             
         # statsmodels jarque_bera
-        jbstat, pvalue, skew, kurtosis = stattools.jarque_bera(heights)
+        jbstat, pvalue, skew, kurtosis = stattools.jarque_bera(data)
         if pvalue > 0.05:
             # Same as scipy.normaltest!
             statsmodels_jarque_bera_passed += 1
