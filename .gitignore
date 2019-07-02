@@ -16,6 +16,7 @@
 
 # Don't ignore extras or solutions
 !/**/images/*
+!/**/img/*
 !/**/extra/*
 !/**/extras/*
 !/**/solutions/*
