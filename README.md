@@ -1,16 +1,17 @@
 # Self-taught training materials in quantitative finance
 
 ## Copyright
-Copyright (c) 2019 Python Charmers Pty Ltd, Australia. All rights reserved. https://pythoncahrmers.com
-[Python Charmers Logo](python_charmers_logo.png)
+
+Copyright (c) 2019 Python Charmers Pty Ltd, Australia, <https://pythoncharmers.com>. All rights reserved.
+
+<img src="notebooks/img/python_charmers_logo.png" width="400" alt="Python Charmers Logo">
 
 ## License
 
-Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) 
-
-See `LICENSE.md` for details.
+Published under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license. See `LICENSE.md` for details.
 
 ## Sponsor
 
-Tibra Global Services, https://tibra.com
-[Tibra Logo](tibra_logo.png)
+Sponsored by Tibra Global Services, <https://tibra.com>
+
+<img src="notebooks/img/tibra_logo.png" width="400" alt="Tibra Logo">
