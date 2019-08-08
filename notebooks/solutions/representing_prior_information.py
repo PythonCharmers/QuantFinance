@@ -9,7 +9,7 @@ k2
 
 assert len(features2) == k2.shape[1]
 
-model2 = MinDivergenceModel(features2, samplespace)
+model2 = MinDivergenceModel(features2, samplespace, vectorized=True)
 
 model2.fit(k2);
 
