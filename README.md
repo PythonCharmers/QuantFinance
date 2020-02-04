@@ -2,9 +2,9 @@
 
 ## Copyright
 
-Copyright (c) 2019 Python Charmers Pty Ltd, Australia, <https://pythoncharmers.com>. All rights reserved.
+Copyright (c) 2020 Python Charmers Pty Ltd, Australia, <https://pythoncharmers.com>. All rights reserved.
 
-<img src="notebooks/img/python_charmers_logo.png" width="400" alt="Python Charmers Logo">
+<img src="notebooks/img/python_charmers_logo.png" width="300" alt="Python Charmers Logo">
 
 ## License
 
@@ -14,4 +14,4 @@ Published under the Creative Commons Attribution-NonCommercial 4.0 International
 
 Sponsored by Tibra Global Services, <https://tibra.com>
 
-<img src="notebooks/img/tibra_logo.png" width="400" alt="Tibra Logo">
+<img src="notebooks/img/tibra_logo.png" width="300" alt="Tibra Logo">
