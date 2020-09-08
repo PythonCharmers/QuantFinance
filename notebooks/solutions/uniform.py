@@ -1,6 +1,6 @@
 #1
 
-distribution = stats.normal(0, 1)
+distribution = stats.norm(0, 1)
 
 x_values = np.linspace(-3, 3, 1000)
 y = distribution.pdf(x_values)
