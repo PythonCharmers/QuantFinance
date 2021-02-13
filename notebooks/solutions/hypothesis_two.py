@@ -4,23 +4,28 @@ xrate = quandl.get("RBA/FXRUSD-AUD-USD-Exchange-Rate")
 
 #2
 xdelta = xrate.diff().dropna()
-up = xdelta[xdelta["Value"] > 0]
-down = xdelta[xdelta["Value"] < 0]
-up_result = len(up)/len(xdelta)
-down_result = len(down)/len(xdelta)
-up_result
+xdelta['lag'] = xdelta['Value'].shift(1)
+xdelta = xdelta.dropna()
+xdelta['matched_movement'] = xdelta['Value']*xdelta['lag'] > 0 # compare values to lagged values
+samp_prop = np.sum(xdelta['matched_movement'])/xdelta.shape[0] # get proportion of movements that match the previous movement
+samp_prop
+
 
 #Extended Exercise
 
 iters = range(1000) #Repeat our experiment 1000 times.
 results = []
+distribution = norm(0, 1)
 
 for i in iters:
-    data = np.random.normal(size=365) #Generate normally distributed data for 1 year.
-    data = np.array([x > 0 for x in data]) # Up = True, Down = False
-
-    test_result = data.sum()/len(data) #'True' is stored as a 1, so we can use sum to count.
-    results.append(test_result)
+    X = distribution.rvs(365) # create randomly distributed data for a year
+    data = pd.DataFrame([X[i] for i in range(len(X))])
+    data.columns = ['Value']
+    data['lag'] = data['Value'].shift(1)
+    data = data.dropna()
+    data['matched_movement'] = data['Value']*data['lag'] > 0 # compare values to lagged values
+    data_prop = np.sum(data['matched_movement'])/data.shape[0]
+    results.append(data_prop)
 
 plt.hist(results)
 
