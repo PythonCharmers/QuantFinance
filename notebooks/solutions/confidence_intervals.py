@@ -30,7 +30,7 @@ for i in iters:
 
 mu = np.mean(means)
 std = np.std(means)
-stats.norm.interval(0.95, loc=mu, scale=std/sqrt(1000))
+stats.norm.interval(0.95, loc=mu, scale=std)
 
 # 4 
 pool = data["InterestRate"].dropna()
