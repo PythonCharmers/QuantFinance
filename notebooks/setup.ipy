@@ -3,7 +3,7 @@ import pandas as pd
 import altair as alt
 if not alt.data_transformers.active == 'json':  # Check json isn't already active
     alt.data_transformers.enable('json')
-alt.renderers.enable('notebook')
+alt.renderers.enable('default')
 from scipy import stats
 
 import random
