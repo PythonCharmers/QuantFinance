@@ -24,7 +24,7 @@ def rolling_forecasting_origin(time_series, m=1):
 # Let's test our function!
 dates = np.array('2015-07-04', dtype=np.datetime64) + np.arange(100)
 dates
-rolling_forecasting_origin(date, 10)
+rolling_forecasting_origin(dates, 10)
 
 # Here is essentially the same function code, but presented as a python generator which 
 # can be iterated over, for example in a for loop.
