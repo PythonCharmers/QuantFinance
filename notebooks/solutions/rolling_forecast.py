@@ -54,5 +54,12 @@ def rolling_forecasting_origin_generator(time_series, m=1):
     return
 
 
-
-
+# This is a more advanced function, using only python generators.
+from itertools import count
+def rolling_forecasting_origin(time_series, m=1):
+    yield from zip(
+        # len(time_series)-m+2 returns the final length required + 1
+        # (+1 to account for the range starting from 1)
+        map(np.arange, range(1, (len(time_series)-m+2))),
+        count(start=m)
+    )
