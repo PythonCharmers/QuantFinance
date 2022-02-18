@@ -15,7 +15,7 @@ samp_prop
 
 iters = range(1000) #Repeat our experiment 1000 times.
 results = []
-distribution = norm(0, 1)
+distribution = stats.norm(0, 1)
 
 for i in iters:
     X = distribution.rvs(365) # create randomly distributed data for a year
@@ -29,7 +29,7 @@ for i in iters:
 
 plt.hist(results)
 
-stats.ttest_1samp(results, 0.5)
+t_stat, p_val = stats.ttest_1samp(results, 0.5)
 print('t stat: {:.4f}, p value: {:4f}'.format(t_stat, p_val))
 
 
