@@ -1,2 +1,2 @@
-
+# To modify the threshold, we change the threshold for each test to 0.05/5=0.01, and therefore the type 1 error rate for the whole experiment would be: 1-(1-0.01)^5=0.049 which is close to 0.05
 # After modify the threshold, the result is no longer significant.
