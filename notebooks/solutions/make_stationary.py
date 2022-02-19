@@ -28,6 +28,6 @@ plt.plot(Xar1_detrended)  # linear detrends aren't perfect
 
 adf, p_value, *_ = adfuller(Xar1_detrended)
 
-p_value < 0.05, p_value  # Do NOT hypothesis of a unit root, which indicates stationary
+p_value < 0.05, p_value  # Do NOT Reject hypothesis of a unit root, which indicates non stationary
 
 # In this case, linear detrend is not sufficient to make stationary
