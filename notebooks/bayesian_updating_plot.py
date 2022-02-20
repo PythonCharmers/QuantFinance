@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 dist = stats.beta
-n_trials = [0, 1, 2, 3, 4, 5, 8, 15, 50, 500]
+n_trials = [0, 1, 2, 3, 4, 5, 8, 15, 50, 5000]
 data = stats.bernoulli.rvs(0.5, size=n_trials[-1])
 x = np.linspace(0, 1, 100)
 
