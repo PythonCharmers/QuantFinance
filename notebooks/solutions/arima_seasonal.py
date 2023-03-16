@@ -1,4 +1,4 @@
-#1. In the above example we have specified a seasonal ARMIMA model of 0, 1, 0 (P,Q,Q) with a period of 4, since 
+#1. In the above example we have specified a seasonal ARMIMA model of 0, 1, 0 (P,D,Q) with a period of 4, since
 #    we are using quarterly data.
 
 #2.

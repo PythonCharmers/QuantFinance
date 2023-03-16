@@ -1,4 +1,4 @@
 
 stats.normaltest(heights)
 
-stats.kstest(heights, 'norm')
+stats.kstest(heights, stats.norm.fit(heights).cdf)
