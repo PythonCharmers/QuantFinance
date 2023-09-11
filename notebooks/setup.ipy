@@ -13,3 +13,6 @@ import pandas as pd
 
 %matplotlib inline
 from matplotlib import pyplot as plt
+import quandl
+import my_secrets
+quandl.ApiConfig.api_key = my_secrets.QUANDL_API_KEY
