@@ -14,7 +14,7 @@ def posterior(model, data, normalize=True, x=0.2):
     if not normalize:
         return numerator
     else:
-        return numerator / evidence(data)
+        return numerator / evidence(data, x)
 
 def likelihood(data, model, x=0.2):
     """
@@ -28,12 +28,12 @@ def likelihood(data, model, x=0.2):
         # no spots
         return {'chickenpox': 0.2, 'not chickenpox': 1 - x}[model]
     
-def evidence(data):
+def evidence(data, x=0.2):
     """
     The proportion of people in the general population who have spots or no spots
     """
-    return (posterior('chickenpox', data, normalize=False) +
-            posterior('not chickenpox', data, normalize=False))
+    return (posterior('chickenpox', data, normalize=False, x=x) +
+            posterior('not chickenpox', data, normalize=False, x=x))
 
 conditional_sum = (posterior('chickenpox', 'spots', normalize=True) +
                    posterior('not chickenpox', 'spots', normalize=True))
