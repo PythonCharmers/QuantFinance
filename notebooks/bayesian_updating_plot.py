@@ -9,9 +9,8 @@ x = np.linspace(0, 1, 100)
 
 # For the already prepared, I'm using Binomial's conj. prior.
 for k, N in enumerate(n_trials):
-    sx = plt.subplot(len(n_trials)/2, 2, k+1)
-    plt.xlabel("$p$, probability of heads") \
-        if k in [0, len(n_trials)-1] else None
+    sx = plt.subplot(int(len(n_trials) / 2), 2, k + 1)
+    plt.xlabel("$p$, probability of heads") if k in [0, len(n_trials) - 1] else None
     plt.setp(sx.get_yticklabels(), visible=False)
     heads = data[:N].sum()
     y = dist.pdf(x, 1 + heads, 1 + N - heads)
@@ -24,8 +23,6 @@ for k, N in enumerate(n_trials):
     plt.autoscale(tight=True)
 
 
-plt.suptitle("Bayesian updating of posterior probabilities",
-             y=1.02,
-         fontsize=14)
+plt.suptitle("Bayesian updating of posterior probabilities", y=1.02, fontsize=14)
 
 plt.tight_layout()
