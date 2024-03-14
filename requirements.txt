@@ -9,7 +9,7 @@ jupyter
 notebook
 pytest
 statsmodels
-sklearn
+scikit-learn
 tensorflow
 tables
 quandl
