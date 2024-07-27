@@ -1,9 +1,18 @@
 
 import pandas as pd
 import altair as alt
+
 if not alt.data_transformers.active == 'json':  # Check json isn't already active
-    alt.data_transformers.enable('json')
+    import os
+    # Make a temp folder to put these json files in - Altair creates a lot of them!
+    dataset_temp_name = 'altair-temp-data/'
+    if not os.path.exists(dataset_temp_name):
+        # if the folder doesn't exist, create it
+        os.mkdir(dataset_temp_name)
+    # Tell Altair to temporary save datasets it needs to that folder
+    alt.data_transformers.enable('json', prefix=dataset_temp_name)
 alt.renderers.enable('default')
+
 from scipy import stats
 
 import random
